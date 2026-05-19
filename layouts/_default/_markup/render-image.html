@@ -1,5 +1,5 @@
 {{- $url := .Destination -}}
 {{- if hasPrefix $url "/" -}}
-  {{- $url = $url | relURL -}}
+  {{- $url = $url | absURL -}}
 {{- end -}}
-<img src="{{ $url }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy">
+<img class="myhook" src="{{ $url }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy">
