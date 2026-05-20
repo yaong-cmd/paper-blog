@@ -14,6 +14,12 @@ pagination.pagerSize = 10
 [minify]
   disableXML = true
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+      hardLineBreaks = true
+
 [params]
   env = "production"
   description = "종이 같은 질감의 블로그."
